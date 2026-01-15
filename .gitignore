@@ -1,0 +1,80 @@
+# ===================== 核心：Python编译缓存 & __pycache__  =====================
+# 匹配所有目录下的__pycache__文件夹（无论在根目录还是子目录，均会被忽略）
+__pycache__/
+
+# Python字节码编译文件（.pyc、.pyo、.pyd），覆盖不同Python版本的编译产物
+# *.pyc：Python编译后的字节码文件（最常见）
+# *.pyo：优化编译后的字节码文件
+# *.pyd：Windows平台下的Python扩展模块（类似Linux的.so文件）
+*.py[cod]
+
+# Python 3.8+ 产生的 __pycache__ 下的优化文件（避免遗漏）
+*$py.class
+
+# ===================== 虚拟环境（常用，避免提交冗余依赖） =====================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ===================== 项目打包/分发产物 =====================
+# setuptools/distutils 打包产物
+dist/
+build/
+*.egg-info/
+.eggs/
+*.egg
+# Wheel包文件
+*.whl
+# 源码分发包
+*.tar.gz
+
+# ===================== 运行时数据/日志/临时文件 =====================
+# 日志文件
+*.log
+logs/
+# 临时文件
+*.tmp
+*.temp
+VQA_CONFIG_GUIDE.md
+# 本地数据存储（如数据库文件、CSV导出等）
+data/
+*.db
+*.sqlite3
+vqa_results/
+# ===================== 环境变量/敏感配置（避免泄露密钥） =====================
+.env
+.env.local
+.env.*
+!/.env.example  # 保留示例配置（无敏感信息）
+config.local.py
+
+# ===================== 测试/覆盖率报告 =====================
+.pytest_cache/
+.coverage
+htmlcov/
+nosetests.xml
+
+# ===================== 编辑器/IDE 配置文件（通用） =====================
+# VS Code
+.vscode/
+# PyCharm/IntelliJ
+.idea/
+*.iml
+# Vim
+*.swp
+*.swo
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# ===================== 操作系统冗余文件 =====================
+# Mac OS
+.DS_Store
+# Windows
+Thumbs.db
+desktop.ini
