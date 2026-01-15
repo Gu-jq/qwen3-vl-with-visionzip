@@ -1463,12 +1463,6 @@ class Qwen3VLModel(Qwen3VLPreTrainedModel):
             # Decoding step
             deepstack_image_embeds = self._cached_deepstack_visual_embeds
             image_mask_full = self._cached_image_mask_full
-            # In decoding, the input is just the new token. We don't inject DeepStack into the output token itself.
-            # But the language_model._deepstack_process expects the FULL sequence mask if we are not careful.
-            # Actually, _deepstack_process does: hidden_states[visual_pos_masks] += deepstack_visual_embeds
-            # If hidden_states is length 1 and visual_pos_masks is False, nothing happens (correct).
-            # For decoding, we want visual_pos_masks to be all False for the CURRENT hidden states.
-            pass
 
         if pixel_values_videos is not None:
             video_embeds, deepstack_video_embeds = self.get_video_features(pixel_values_videos, video_grid_thw)
