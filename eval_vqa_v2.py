@@ -16,11 +16,11 @@ VQA v2.0 评测脚本 for Qwen3-VL with VisionZip
    ├── v2_mscoco_train2014_annotations.json          (可选)
    └── train2014/                                     (可选)
 
-3. 修改第 77 行的 VQA_DATA_DIR 为你的数据集路径
+3. 修改第 74 行的 VQA_DATA_DIR 为你的数据集路径
 
 配置与运行:
 -----------
-1. 修改第 83-87 行的配置参数:
+1. 修改第 80-84 行的配置参数:
    - CONFIG_NAME: 结果文件命名
    - USE_COMPRESSION: True/False (是否使用 VisionZip)
    - COMPRESSION_MODULE: "standard"/"notalign"/"layeradjust"/"mixscore"/"all"
