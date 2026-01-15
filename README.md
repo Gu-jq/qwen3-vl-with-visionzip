@@ -184,6 +184,3 @@ nohup python eval_vqa_v2.py > vqa_eval.log 2>&1 &
 - **Qwen3-VL 官方**: https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct
 - **VLMEvalKit**: https://github.com/open-compass/VLMEvalKit
 - **VQA v2.0 数据集**: https://visualqa.org/download.html
-- **MMStar 数据集**: https://github.com/MMStar-Benchmark/MMStar
-
-
