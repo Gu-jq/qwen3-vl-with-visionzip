@@ -22,14 +22,14 @@ sys.path.insert(0, os.path.join(HOME_DIR, 'VLMEvalKit'))
 sys.path.insert(0, HOME_DIR)
 
 from vlmeval.dataset import OCRBench
-from qwen3_vl_visionzip_mixscore import Qwen3VLForConditionalGeneration as LocalQwen3VLForConditionalGeneration
+from qwen3_vl_visionzip_notalign import Qwen3VLForConditionalGeneration as LocalQwen3VLForConditionalGeneration
 from transformers import Qwen3VLForConditionalGeneration as HFQwen3VLForConditionalGeneration
 from transformers import AutoProcessor
 
 # --- 2. 评测配置 ---
 MODEL_PATH = "Qwen/Qwen3-VL-2B-Instruct"  # 模型权重路径或 HF ID
 USE_COMPRESSION = True                   # <--- 手动切换：True 为评测压缩模型，False 为原模型
-DOMINANT_RATIO = 0.15                    # 压缩比例配置
+DOMINANT_RATIO = 0.55                    # 压缩比例配置
 CONTEXTUAL_RATIO = 0.05
 MAX_SAMPLES = None                       # 设置为整数跑快速测试，None 跑全量（1000条左右）
 
